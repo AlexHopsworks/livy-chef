@@ -8,6 +8,7 @@
 #
 
 include_recipe "java"
+setup_aws()
 
 my_ip = my_private_ip()
 
