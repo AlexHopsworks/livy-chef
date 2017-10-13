@@ -151,3 +151,12 @@ bash "jupyter-hdfscontents" do
     pip install hdfscontents --upgrade
 EOF
 end
+
+
+bash "sparkmagic-support-user" do
+    user node['livy']['user']
+    ignore_failure true
+    code <<-EOF
+    pip install --upgrade --user sparkmagic
+EOF
+end
